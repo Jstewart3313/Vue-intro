@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <h1>{{todaysPlanets.title}}</h1>
+    <img :src=todaysPlanets.hdurl />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  data() {
+    return {
+      todaysPlanets: {}
+    }
+  },
+  created: function() {
+    this.getPlanet()
+  },
+  methods: {
+    getPlanet() {
+      axios.get('https://api.nasa.gov/planetary/apod?api_key=H0PSZTXODnpFgc2VU5Xxsh06bGam11sQsPSzpWh0').then( response => {
+        this.todaysPlanets = response.data
+      })
+    }
   }
 }
 </script>
@@ -26,3 +40,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+<!-- nasa api key H0PSZTXODnpFgc2VU5Xxsh06bGam11sQsPSzpWh0 -->
