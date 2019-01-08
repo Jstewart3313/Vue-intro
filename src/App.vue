@@ -1,11 +1,11 @@
 <template >
   <div v-if='!daily' id="app">
-    <h1>hi</h1>
+    <Monthly></Monthly>
   </div>
   <div v-else='daily' id="app">
     <h1>{{todaysPlanets.title}}</h1>
     <img :src=todaysPlanets.hdurl />
-    <button >
+    <button v-on:click='monthly'>
       View Monthly
     </button>
   </div>
@@ -13,10 +13,12 @@
 
 <script>
 import axios from 'axios';
+import Monthly from './components/Monthly'
 
 export default {
   name: 'App',
   components: {
+    Monthly
   },
   data() {
     return {
@@ -40,7 +42,11 @@ export default {
         hdurl: 'image',
         description: 'lorem ipsum'
       }
+    },
+    monthly() {
+      this.daily = false
     }
+
   }
 }
 </script>
