@@ -8,8 +8,9 @@
 </template>
 
 <script>
+  let counter = 1
   import axios from "axios";
-
+  
   export default {
     name: "App",
     components: {},
@@ -43,8 +44,7 @@
           currentdate.getMonth() +
           1 +
           "-" + '0' +
-          currentdate.getDate()
-          console.log(timeStamp)
+          (currentdate.getDate() + counter++)
         return timeStamp;
       },
       Next() {
