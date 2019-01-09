@@ -1,4 +1,4 @@
-<template>
+<template class='main'>
   <div id="app">
     <h1 class="title">{{ planet.title }}</h1>
     <img class="image" :src="planet.hdurl" />
@@ -11,8 +11,11 @@
 </template>
 
 <script>
-  let counter = 0
   import axios from "axios";
+  // import { api } from '../App.vue'
+  
+  let counter = 0
+
 
   export default {
     name: "App",
@@ -50,7 +53,7 @@
     },
     methods: {
       // getPlanet() {
-      //   axios.get('https://api.nasa.gov/planetary/apod?api_key=H0PSZTXODnpFgc2VU5Xxsh06bGam11sQsPSzpWh0').then( response => {
+      //   axios.get('https://api.nasa.gov/planetary/apod?api_key=${api}').then( response => {
       //     this.planet = response.data
       //   })
       // }
@@ -75,7 +78,7 @@
       Next() {
         // axios
         //   .get(
-        //     `https://api.nasa.gov/planetary/apod?date=${this.generateTimeStamp()}&api_key=H0PSZTXODnpFgc2VU5Xxsh06bGam11sQsPSzpWh0`
+        //     `https://api.nasa.gov/planetary/apod?date=${this.generateTimeStamp()}&api_key=${api}`
         //   )
         //   .then(response => {
         //     this.planet = response.data;
@@ -94,15 +97,18 @@
 <style>
   #app {
     font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+    color: #beddfc;
+    background-color: black;
   }
+
   .image {
     height: 300px;
     width: 300px;
+  }
+
+  #main {
+    background-color: black;
   }
 </style>
 
