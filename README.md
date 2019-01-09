@@ -1,4 +1,4 @@
-# nasa Code-Challenge
+# NASA/ Flat-Earth Code-Challenge
 
 > A Vue.js project
 
