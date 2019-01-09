@@ -1,0 +1,36 @@
+body{
+  margin: 0px;
+}
+
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #beddfc;
+  background-color: black;
+  height: 1000px;
+  margin: 0px;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+}
+
+.main {
+  background-color: black;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin-left: 500px;
+}
+
+.planet-btn {
+  border-radius: 10px;
+}
+
+.next-btn {
+  border-radius: 10px;
+}
