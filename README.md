@@ -1,4 +1,4 @@
-# nasa
+# nasa Code-Challenge
 
 > A Vue.js project
 
@@ -11,11 +11,16 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# to view the webpage locally
+vist localhost:3000
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Challenge
+
+learn Vue.js by utilizing the nasa API, Which was currently down at the time of my challenge. In order to work through I set up local mock data withouth the fetch, which allowed me to continue to learn Vue and its components withouth worrying about skills I already know.
+
+## Technologies
+
+I used axios for the first time to attempt my fetch calls, while it did work, I was impressed with the benefits of axios and the response it gave against the the traditional fetch. 
+
+
