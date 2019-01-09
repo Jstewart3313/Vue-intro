@@ -3,7 +3,7 @@
     <h1 class="title">{{ planet.title }}</h1>
     <img class="image" :src="planet.hdurl" />
     <p>{{ planet.description }}</p>
-    <div>
+    <div class='btn-container'>
       <button class="planet-btn" v-on:click="getMocks">View Today</button>
       <button class="next-btn" v-on:click="Next">View Next</button>
     </div>
@@ -95,21 +95,7 @@
 </script>
 
 <style>
-  #app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    text-align: center;
-    color: #beddfc;
-    background-color: black;
-  }
-
-  .image {
-    height: 300px;
-    width: 300px;
-  }
-
-  #main {
-    background-color: black;
-  }
+  @import './App.css'
 </style>
 
 
